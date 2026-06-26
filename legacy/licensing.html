@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beat Licensing — Placidchills</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=general-sans@400,500,600&display=swap">
+
+<style>
+:root{--bg:#0A0907;--bg-soft:#0E0C09;--surface:#15120F;--surface-raised:#1C1812;--text:#F2EDE3;--text-muted:#93897A;--text-faint:#5C5448;--accent:#D98E3F;--accent-soft:#8A5A26;--line:#2A241C;--radius:10px;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:"General Sans",-apple-system,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(ellipse 800px 500px at 50% -10%,rgba(217,142,63,.05),transparent 55%);pointer-events:none;z-index:0;}
+h1,h2,h3,h4{font-family:"Clash Display",sans-serif;font-weight:600;letter-spacing:-.02em;}
+a{color:var(--accent);text-decoration:none;}
+a:hover{text-decoration:underline;}
+img{max-width:100%;display:block;}
+.wrap{max-width:780px;margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+nav{position:sticky;top:0;z-index:100;border-bottom:1px solid var(--line);background:rgba(10,9,7,.9);backdrop-filter:blur(14px);padding:14px 0;}
+.nav-inner{max-width:1140px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;}
+.nav-wordmark{font-family:"Clash Display",sans-serif;font-size:17px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:7px;text-decoration:none;}
+.nav-wordmark .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block;}
+.nav-back{font-family:"Space Mono",monospace;font-size:12px;color:var(--text-muted);padding:7px 14px;border:1px solid var(--line);border-radius:100px;transition:all .2s;}
+.nav-back:hover{border-color:var(--accent-soft);color:var(--accent);text-decoration:none;}
+main{padding:64px 0 120px;}
+.page-eyebrow{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.18em;color:var(--accent);text-transform:uppercase;margin-bottom:14px;}
+.page-title{font-size:clamp(28px,5vw,44px);margin-bottom:12px;letter-spacing:-.02em;}
+.page-meta{font-family:"Space Mono",monospace;font-size:12px;color:var(--text-faint);margin-bottom:52px;padding-bottom:32px;border-bottom:1px solid var(--line);}
+.prose h2{font-size:20px;margin:40px 0 14px;color:var(--text);}
+.prose h3{font-size:16px;margin:28px 0 10px;color:var(--text);}
+.prose p{color:var(--text-muted);margin-bottom:16px;font-size:15.5px;}
+.prose ul,.prose ol{color:var(--text-muted);padding-left:20px;margin-bottom:16px;}
+.prose li{margin-bottom:7px;font-size:15.5px;}
+.prose strong{color:var(--text);}
+.prose a{color:var(--accent);}
+.prose hr{border:none;border-top:1px solid var(--line);margin:36px 0;}
+.notice{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;margin-bottom:28px;}
+.notice p{margin-bottom:0;font-size:14px;}
+footer.legal-footer{border-top:1px solid var(--line);padding:32px 0;text-align:center;}
+.footer-links{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:12px;}
+.footer-links a{font-family:"Space Mono",monospace;font-size:11.5px;color:var(--text-faint);}
+.footer-links a:hover{color:var(--accent);text-decoration:none;}
+.footer-copy{font-family:"Space Mono",monospace;font-size:11px;color:var(--text-faint);}
+/* LICENSING TABLE */
+.license-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin:24px 0;}
+.license-table th{background:var(--surface-raised);font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--text-faint);text-transform:uppercase;padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);}
+.license-table td{padding:13px 16px;font-size:14px;color:var(--text-muted);border-bottom:1px solid var(--line);vertical-align:top;}
+.license-table tr:last-child td{border-bottom:none;}
+.license-table td:first-child{color:var(--text);font-weight:500;}
+.yes{color:#5BAD7A;}
+.no{color:#C05050;}
+.tier-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;margin-bottom:16px;}
+.tier-card.featured{border-color:rgba(217,142,63,.3);}
+.tier-name{font-family:"Clash Display",sans-serif;font-size:18px;font-weight:600;margin-bottom:4px;}
+.tier-price{font-family:"Space Mono",monospace;font-size:22px;color:var(--accent);margin-bottom:14px;}
+.tier-allows,.tier-prohibits{list-style:none;padding:0;}
+.tier-allows li::before{content:"✓  ";color:#5BAD7A;}
+.tier-prohibits li::before{content:"✗  ";color:#C05050;}
+.tier-allows li,.tier-prohibits li{font-size:14px;color:var(--text-muted);margin-bottom:6px;}
+.faq-item{border-top:1px solid var(--line);padding:20px 0;}
+.faq-q{font-size:15px;font-weight:600;color:var(--text);margin-bottom:8px;}
+.faq-a{font-size:14.5px;color:var(--text-muted);}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-wordmark"><span class="dot"></span>Placidchills</a>
+    <a href="/" class="nav-back">← Back to site</a>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+    <div class="page-eyebrow">Beats</div>
+    <h1 class="page-title">Licensing</h1>
+    <div class="page-meta">Understand exactly what you&rsquo;re buying before you buy it</div>
+    <div class="prose">
+<div class="notice"><p><strong>New here?</strong> A "beat lease" means you're buying a licence to record and release music over a beat — not the beat itself. The Producer keeps the copyright. Think of it like renting a location for a film shoot: you use it, you credit it, but you don't own the building. Exclusive rights are the exception — they transfer the beat fully to you.</p></div>
+
+<h2>The Four Licence Tiers</h2>
+
+<div class="tier-card">
+<div class="tier-name">MP3 Lease</div>
+<div class="tier-price">₹2,500</div>
+<ul class="tier-allows">
+<li>Untagged MP3 file (320kbps)</li>
+<li>Up to 100,000 streams across all platforms</li>
+<li>Up to 5,000 sales or paid downloads</li>
+<li>1 official music video</li>
+<li>Non-profit / mixtape use</li>
+<li>Live performances (unlimited)</li>
+</ul>
+<ul class="tier-prohibits">
+<li>WAV or lossless file not included</li>
+<li>TV, film, advertisement, or sync use</li>
+<li>Selling or sublicensing to another artist</li>
+<li>Radio airplay (commercial)</li>
+</ul>
+<p style="margin-top:14px;font-size:13.5px;color:var(--text-faint);font-family:'Space Mono',monospace;">Credit required: "Prod. Placidchills" in all metadata and descriptions</p>
+</div>
+
+<div class="tier-card">
+<div class="tier-name">WAV Lease <span style="font-family:'Space Mono',monospace;font-size:12px;background:rgba(217,142,63,.15);color:#D98E3F;padding:3px 9px;border-radius:4px;margin-left:8px;vertical-align:middle;">Most Popular</span></div>
+<div class="tier-price">₹5,000</div>
+<ul class="tier-allows">
+<li>WAV + MP3 files (full quality)</li>
+<li>Up to 500,000 streams across all platforms</li>
+<li>Up to 10,000 sales or paid downloads</li>
+<li>1 official music video</li>
+<li>Non-profit and commercial release</li>
+<li>Live performances (unlimited)</li>
+<li>Radio airplay (limited — see below)</li>
+</ul>
+<ul class="tier-prohibits">
+<li>Stems / individual track files not included</li>
+<li>TV, film, advertisement, or sync use</li>
+<li>Selling or sublicensing to another artist</li>
+</ul>
+<p style="margin-top:14px;font-size:13.5px;color:var(--text-faint);font-family:'Space Mono',monospace;">Credit required: "Prod. Placidchills" in all metadata and descriptions</p>
+</div>
+
+<div class="tier-card">
+<div class="tier-name">Trackout / Stems Lease</div>
+<div class="tier-price">₹10,000</div>
+<ul class="tier-allows">
+<li>Full stems (individual track files: drums, bass, melody, etc.)</li>
+<li>WAV + MP3 files included</li>
+<li>Unlimited streams</li>
+<li>Unlimited sales and downloads</li>
+<li>Unlimited music videos</li>
+<li>Live performances (unlimited)</li>
+<li>Radio airplay (unlimited)</li>
+</ul>
+<ul class="tier-prohibits">
+<li>TV, film, advertisement, or sync use without upgrade</li>
+<li>Selling or sublicensing to another artist</li>
+<li>Registering the beat as your own copyright</li>
+</ul>
+<p style="margin-top:14px;font-size:13.5px;color:var(--text-faint);font-family:'Space Mono',monospace;">Credit required: "Prod. Placidchills" in all metadata and descriptions</p>
+</div>
+
+<div class="tier-card featured">
+<div class="tier-name">Exclusive Rights</div>
+<div class="tier-price">₹35,000+ <span style="font-family:'Space Mono',monospace;font-size:13px;color:var(--text-faint);">(negotiated per beat)</span></div>
+<ul class="tier-allows">
+<li>Full ownership transfer — you own the beat</li>
+<li>All stems and files included</li>
+<li>Unlimited streams, sales, videos</li>
+<li>TV, film, advertisement, and sync use</li>
+<li>Radio airplay (unlimited)</li>
+<li>Beat permanently retired from the store</li>
+<li>No other artist can ever licence this beat</li>
+</ul>
+<ul class="tier-prohibits">
+<li>Reselling or re-licensing the beat to another producer/artist after purchase</li>
+</ul>
+<p style="margin-top:14px;font-size:13.5px;color:var(--text-faint);font-family:'Space Mono',monospace;">Credit optional but appreciated: "Prod. Placidchills" — contact us to make an offer before purchasing</p>
+</div>
+
+<h2>Quick Comparison</h2>
+<table class="license-table">
+<thead>
+<tr>
+<th>Feature</th>
+<th>MP3</th>
+<th>WAV</th>
+<th>Stems</th>
+<th>Exclusive</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>File format</td><td>MP3</td><td>WAV + MP3</td><td>Stems + WAV + MP3</td><td>Stems + all</td></tr>
+<tr><td>Stream limit</td><td>100K</td><td>500K</td><td>Unlimited</td><td>Unlimited</td></tr>
+<tr><td>Sales limit</td><td>5,000</td><td>10,000</td><td>Unlimited</td><td>Unlimited</td></tr>
+<tr><td>Music videos</td><td>1</td><td>1</td><td>Unlimited</td><td>Unlimited</td></tr>
+<tr><td>Radio</td><td class="no">✗</td><td>Limited</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+<tr><td>TV / Sync</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="yes">✓</td></tr>
+<tr><td>Beat stays in store</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">Retired</td></tr>
+<tr><td>Producer credit required</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td>Optional</td></tr>
+<tr><td>Price</td><td>₹2,500</td><td>₹5,000</td><td>₹10,000</td><td>₹35,000+</td></tr>
+</tbody>
+</table>
+
+<h2>Credit Requirements</h2>
+<p>For all non-exclusive licences, you <strong>must</strong> credit the producer as follows:</p>
+<ul>
+<li><strong>Streaming platforms</strong> (Spotify, Apple Music, etc.) — include "Prod. Placidchills" in the track title or in the credits field of your distribution platform</li>
+<li><strong>YouTube / social media</strong> — include "Prod. Placidchills" in the video title or description</li>
+<li><strong>Physical releases</strong> — include "Produced by Placidchills" in liner notes</li>
+</ul>
+<p>Failure to credit may result in termination of your licence without refund.</p>
+
+<h2>What You Cannot Do (All Tiers)</h2>
+<ul>
+<li><strong>Resell or sublicense</strong> — You cannot sell, give, or transfer your licence to another artist or entity</li>
+<li><strong>Claim production credit</strong> — You cannot claim to have produced the beat or register it as your own composition with any PRO (IPRS, BMI, ASCAP, etc.)</li>
+<li><strong>Use before purchase</strong> — Using a beat (including in a released or publicly uploaded track) before completing a purchase is copyright infringement</li>
+<li><strong>Strip or alter credits</strong> — You cannot remove Placidchills' metadata from any delivered file</li>
+<li><strong>Exceed tier limits</strong> — If your streams or sales exceed your tier's limits, you must upgrade your licence before continuing distribution</li>
+</ul>
+
+<h2>What Happens When a Non-Exclusive Beat Gets Sold Exclusively?</h2>
+<p>If you hold a valid non-exclusive lease and the same beat is later purchased exclusively by another artist, your existing lease remains valid for the remainder of its term. Your right to continue distributing your released track is protected. However, the beat will no longer be available in the store and new licences cannot be issued.</p>
+
+<h2>Upgrading Your Licence</h2>
+<p>If your release grows beyond your tier limits, you can upgrade at any time. The upgrade price is the difference between your current tier and the new tier (not the full price of the new tier). Contact us to arrange an upgrade before your limits are exceeded.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+<div class="faq-q">Can I use a leased beat on Spotify and Apple Music?</div>
+<div class="faq-a">Yes. All tiers allow streaming distribution. MP3 lease allows up to 100,000 streams, WAV up to 500,000, Stems unlimited.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Do I need a WAV or can I release with the MP3?</div>
+<div class="faq-a">Most distribution platforms (DistroKid, TuneCore, etc.) require WAV quality for streaming. The MP3 lease is fine for SoundCloud, YouTube, and mixtapes. If you're releasing on Spotify or Apple Music professionally, the WAV lease is recommended.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">What do I write in the credits?</div>
+<div class="faq-a">Write exactly: <strong>Prod. Placidchills</strong> — in the song title (e.g. "Song Name (Prod. Placidchills)"), or in the description/credits field of your distribution platform and YouTube upload.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Can I use a leased beat in a music video?</div>
+<div class="faq-a">Yes. MP3 and WAV leases allow one official music video each. Stems and Exclusive leases allow unlimited music videos.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Can I use the beat for a film or advertisement?</div>
+<div class="faq-a">No — TV, film, advertisement, and sync use requires Exclusive Rights. Contact us to discuss pricing for sync licensing.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">What if my song blows up and I exceed the stream limit?</div>
+<div class="faq-a">Congratulations first of all. Contact us to upgrade your licence. You pay only the difference between tiers. Do this before you hit the limit, not after.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Can two artists use the same leased beat?</div>
+<div class="faq-a">Yes. Non-exclusive leases are available to multiple buyers simultaneously. If you want to be the only person who can use a beat, purchase Exclusive Rights.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">I want a beat that's not in the store. What do I do?</div>
+<div class="faq-a">Reach out about Custom Production. We'll build something from scratch tailored to your sound and release goals.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Do I own the copyright to my vocals / lyrics on a leased beat?</div>
+<div class="faq-a">Yes. You own the copyright to your vocal performance and any original lyrics or melodies you record. The Producer retains copyright over the underlying instrumental. This is standard in the music industry.</div>
+</div>
+
+<hr>
+<p style="font-size:14px;">Still have questions? Reach out via <a href="https://www.instagram.com/placidchills_/" target="_blank" rel="noopener">@placidchills_</a> on Instagram.</p>
+</div>
+  </div>
+</main>
+
+<footer class="legal-footer">
+  <div class="footer-links">
+    <a href="/disclaimer">Disclaimer</a>
+    <a href="/privacy-policy">Privacy Policy</a>
+    <a href="/refund-policy">Refund Policy</a>
+    <a href="/terms-of-service">Terms of Service</a>
+    <a href="/licensing">Licensing</a>
+  </div>
+  <div class="footer-copy">© 2026 Placidchills. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

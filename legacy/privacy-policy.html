@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Placidchills</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=general-sans@400,500,600&display=swap">
+
+<style>
+:root{--bg:#0A0907;--bg-soft:#0E0C09;--surface:#15120F;--surface-raised:#1C1812;--text:#F2EDE3;--text-muted:#93897A;--text-faint:#5C5448;--accent:#D98E3F;--accent-soft:#8A5A26;--line:#2A241C;--radius:10px;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:"General Sans",-apple-system,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(ellipse 800px 500px at 50% -10%,rgba(217,142,63,.05),transparent 55%);pointer-events:none;z-index:0;}
+h1,h2,h3,h4{font-family:"Clash Display",sans-serif;font-weight:600;letter-spacing:-.02em;}
+a{color:var(--accent);text-decoration:none;}
+a:hover{text-decoration:underline;}
+img{max-width:100%;display:block;}
+.wrap{max-width:780px;margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+nav{position:sticky;top:0;z-index:100;border-bottom:1px solid var(--line);background:rgba(10,9,7,.9);backdrop-filter:blur(14px);padding:14px 0;}
+.nav-inner{max-width:1140px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;}
+.nav-wordmark{font-family:"Clash Display",sans-serif;font-size:17px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:7px;text-decoration:none;}
+.nav-wordmark .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block;}
+.nav-back{font-family:"Space Mono",monospace;font-size:12px;color:var(--text-muted);padding:7px 14px;border:1px solid var(--line);border-radius:100px;transition:all .2s;}
+.nav-back:hover{border-color:var(--accent-soft);color:var(--accent);text-decoration:none;}
+main{padding:64px 0 120px;}
+.page-eyebrow{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.18em;color:var(--accent);text-transform:uppercase;margin-bottom:14px;}
+.page-title{font-size:clamp(28px,5vw,44px);margin-bottom:12px;letter-spacing:-.02em;}
+.page-meta{font-family:"Space Mono",monospace;font-size:12px;color:var(--text-faint);margin-bottom:52px;padding-bottom:32px;border-bottom:1px solid var(--line);}
+.prose h2{font-size:20px;margin:40px 0 14px;color:var(--text);}
+.prose h3{font-size:16px;margin:28px 0 10px;color:var(--text);}
+.prose p{color:var(--text-muted);margin-bottom:16px;font-size:15.5px;}
+.prose ul,.prose ol{color:var(--text-muted);padding-left:20px;margin-bottom:16px;}
+.prose li{margin-bottom:7px;font-size:15.5px;}
+.prose strong{color:var(--text);}
+.prose a{color:var(--accent);}
+.prose hr{border:none;border-top:1px solid var(--line);margin:36px 0;}
+.notice{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;margin-bottom:28px;}
+.notice p{margin-bottom:0;font-size:14px;}
+footer.legal-footer{border-top:1px solid var(--line);padding:32px 0;text-align:center;}
+.footer-links{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:12px;}
+.footer-links a{font-family:"Space Mono",monospace;font-size:11.5px;color:var(--text-faint);}
+.footer-links a:hover{color:var(--accent);text-decoration:none;}
+.footer-copy{font-family:"Space Mono",monospace;font-size:11px;color:var(--text-faint);}
+/* LICENSING TABLE */
+.license-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin:24px 0;}
+.license-table th{background:var(--surface-raised);font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--text-faint);text-transform:uppercase;padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);}
+.license-table td{padding:13px 16px;font-size:14px;color:var(--text-muted);border-bottom:1px solid var(--line);vertical-align:top;}
+.license-table tr:last-child td{border-bottom:none;}
+.license-table td:first-child{color:var(--text);font-weight:500;}
+.yes{color:#5BAD7A;}
+.no{color:#C05050;}
+.tier-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;margin-bottom:16px;}
+.tier-card.featured{border-color:rgba(217,142,63,.3);}
+.tier-name{font-family:"Clash Display",sans-serif;font-size:18px;font-weight:600;margin-bottom:4px;}
+.tier-price{font-family:"Space Mono",monospace;font-size:22px;color:var(--accent);margin-bottom:14px;}
+.tier-allows,.tier-prohibits{list-style:none;padding:0;}
+.tier-allows li::before{content:"✓  ";color:#5BAD7A;}
+.tier-prohibits li::before{content:"✗  ";color:#C05050;}
+.tier-allows li,.tier-prohibits li{font-size:14px;color:var(--text-muted);margin-bottom:6px;}
+.faq-item{border-top:1px solid var(--line);padding:20px 0;}
+.faq-q{font-size:15px;font-weight:600;color:var(--text);margin-bottom:8px;}
+.faq-a{font-size:14.5px;color:var(--text-muted);}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-wordmark"><span class="dot"></span>Placidchills</a>
+    <a href="/" class="nav-back">← Back to site</a>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+    <div class="page-eyebrow">Legal</div>
+    <h1 class="page-title">Privacy Policy</h1>
+    <div class="page-meta">Last updated: June 2026 &nbsp;&middot;&nbsp; Your data, simply explained</div>
+    <div class="prose">
+<div class="notice"><p><strong>Short version:</strong> We collect your email if you sign up for the mailing list. We don't sell it. We use it to send you what you asked for. Payment data is handled by Payhip — we never see your card number.</p></div>
+
+<h2>Who We Are</h2>
+<p>This website (placidchills.com) is operated by Soumyajit, an independent music producer operating under the name Placidchills, based in Mumbai, India. References to "we", "us", or "our" throughout this policy refer to Soumyajit / Placidchills.</p>
+
+<h2>What Information We Collect</h2>
+<h3>Email addresses</h3>
+<p>If you submit your email address through the website (to receive a free beat, newsletter updates, or mastering announcements), we collect and store your email address. This is voluntary — you are not required to provide it to browse the site.</p>
+
+<h3>Purchase information</h3>
+<p>When you purchase a beat licence, mastering service, or any other product through this website, your payment is processed by <strong>Payhip</strong> or <strong>Razorpay</strong>. We do not collect or store your credit or debit card information. We may receive a notification of your purchase (name, email, product purchased) from these platforms to fulfil your order.</p>
+
+<h3>Usage data</h3>
+<p>We may use basic analytics tools to understand how visitors use the website (pages visited, time on site, general location). This data is aggregated and does not identify you personally.</p>
+
+<h2>How We Use Your Information</h2>
+<ul>
+<li>To deliver the free beat or resource you requested</li>
+<li>To send occasional emails about new beats, mastering openings, and discounts</li>
+<li>To fulfil orders and deliver purchased files</li>
+<li>To respond to enquiries sent via the website or social media</li>
+</ul>
+<p>We will not sell, rent, or share your personal information with third parties for their marketing purposes.</p>
+
+<h2>Third-Party Services</h2>
+<p>We use the following third-party services which may process your data under their own privacy policies:</p>
+<ul>
+<li><strong>Payhip</strong> — handles beat purchases and file delivery. <a href="https://payhip.com/privacy" target="_blank" rel="noopener">Payhip Privacy Policy</a></li>
+<li><strong>Razorpay</strong> — handles mastering service payments. <a href="https://razorpay.com/privacy/" target="_blank" rel="noopener">Razorpay Privacy Policy</a></li>
+<li><strong>MailerLite</strong> — manages our email list. <a href="https://www.mailerlite.com/privacy-policy" target="_blank" rel="noopener">MailerLite Privacy Policy</a></li>
+<li><strong>Spotify</strong> — embedded track players. Spotify may set cookies when you interact with embedded players.</li>
+<li><strong>Airtable</strong> — used internally to manage the beat catalogue. Customer data is not stored in Airtable.</li>
+</ul>
+
+<h2>Email Communications</h2>
+<p>Every email we send includes an unsubscribe link. You can opt out at any time. Once unsubscribed, your email will be removed from our active list within 7 days. You may request complete deletion of your data by contacting us directly.</p>
+
+<h2>Data Retention</h2>
+<p>We retain your email address for as long as you remain subscribed or have an active purchase relationship with us. Purchase records may be retained for up to 7 years for accounting and legal compliance purposes.</p>
+
+<h2>Your Rights</h2>
+<p>You have the right to access, correct, or request deletion of any personal data we hold about you. To exercise these rights, contact us via <a href="https://www.instagram.com/placidchills_/" target="_blank" rel="noopener">@placidchills_</a> on Instagram or through our website.</p>
+
+<h2>Children's Privacy</h2>
+<p>This website is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+
+<h2>Changes to This Policy</h2>
+<p>We may update this Privacy Policy from time to time. Continued use of the website after any changes constitutes acceptance of the updated policy. The "last updated" date at the top of this page reflects the most recent revision.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy? Reach out via <a href="https://www.instagram.com/placidchills_/" target="_blank" rel="noopener">@placidchills_</a> on Instagram.</p>
+</div>
+  </div>
+</main>
+
+<footer class="legal-footer">
+  <div class="footer-links">
+    <a href="/disclaimer">Disclaimer</a>
+    <a href="/privacy-policy">Privacy Policy</a>
+    <a href="/refund-policy">Refund Policy</a>
+    <a href="/terms-of-service">Terms of Service</a>
+    <a href="/licensing">Licensing</a>
+  </div>
+  <div class="footer-copy">© 2026 Placidchills. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
